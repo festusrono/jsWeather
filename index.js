@@ -16,5 +16,11 @@ async function weatherFn(cName) {
         } else {
             alert('City Not Found. Please Try Again');
         }
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+    }
 
+}
+function weatherShowFn(data) {
+    $('#city-name').text(data.name);
 }
